@@ -1,8 +1,21 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1; /* This will make the content area grow to fill the space */
   }
   
   header {
@@ -13,21 +26,20 @@ body {
   }
   
   nav {
-    margin: 10px;
+    background-color: #4CAF50;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top */
     text-align: center;
+    width: 100%;
   }
   
   nav a {
-    margin: 10px;
-    padding: 10px;
-    text-decoration: none;
     color: white;
-    background-color: #4CAF50;
-    border-radius: 5px;
-  }
-  
-  nav a:hover {
-    background-color: #45a049;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
   }
   
   section {
@@ -43,8 +55,8 @@ body {
     padding: 10px;
     background-color: #4CAF50;
     color: white;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    /* bottom: 0; */
   }
   
