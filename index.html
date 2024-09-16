@@ -31,6 +31,14 @@
     <li>Maghrib: 3 Rakats</li>
     <li>Isha: 4 Rakats</li>
   </ul>
+  <section id="prayer-times">
+    <h2>Prayer Times</h2>
+    <p>Here are the prayer times for today:</p>
+    <ul id="prayer-list">
+      <!-- The prayer times will be inserted here by JavaScript -->
+    </ul>
+  </section>
+  
 </section>
 
 <section id="fasting">
@@ -41,6 +49,12 @@
 <section id="zakat">
   <h2>Charity in Islam (Zakat)</h2>
   <p>Zakat is a form of almsgiving and one of the Five Pillars of Islam. It is a religious obligation for Muslims to give a portion of their wealth to those in need.</p>
+  <h2>Zakat Calculator</h2>
+  <p>Enter your wealth to calculate Zakat (2.5% of your wealth)</p>
+  <label for="wealth">Enter your wealth (in your currency):</label>
+  <input type="number" id="wealth" placeholder="Enter amount">
+  <button onclick="calculateZakat()">Calculate Zakat</button>
+  <p id="result"></p>
 </section>
 
 <section id="hajj">
@@ -58,9 +72,24 @@
   </ul>
 </section>
 
+<section id="daily-checklist">
+  <h2>Daily Ibadat Checklist</h2>
+  <ul>
+    <li><input type="checkbox" id="fajr"> Fajr</li>
+    <li><input type="checkbox" id="dhuhr"> Dhuhr</li>
+    <li><input type="checkbox" id="asr"> Asr</li>
+    <li><input type="checkbox" id="maghrib"> Maghrib</li>
+    <li><input type="checkbox" id="isha"> Isha</li>
+  </ul>
+  <button onclick="checkProgress()">Check Progress</button>
+  <p id="progress"></p>
+</section>
+
+
 <footer>
   <p>&copy; 2024 Ibadat Guide | All Rights Reserved</p>
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>
